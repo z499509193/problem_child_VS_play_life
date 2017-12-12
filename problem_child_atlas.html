@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>瀑布流不重复</title>
+  <style>
+  *{margin: 0px;padding: 0px;list-style: none;}
+  #box{width: 1000px;margin: 0 auto;}
+  #box ul{float: left;width: 200px;margin-right: 50px;}
+  #box img{width: 200px;}
+  </style>
+</head>
+<body>
+  <div id="box">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+  </div>
+  <script>
+    var box=document.getElementById('box');
+    var ul=box.children;
+    function insert(){
+      var x=0;
+      var srcNum=Math.floor(Math.random()*20+1);//35是35张图片，可改成任意数，我这里总共是35张图片。Math.random()结果为0-1之间的一个随机数（包括0，不包括1）; Math.floor(num)是返回num的整数部分;
+      var newli=document.createElement('li');//document.createElement()实在对象中创建一个对象
+      newli.innerHTML='<img src="images/'+srcNum+'.jpg" alt="">';//这是图片的文件名，要求是统一。
+      var minH=Math.min(ul[0].clientHeight,ul[1].clientHeight,ul[2].clientHeight,ul[3].clientHeight);
+      for (var i = 0; i < ul.length; i++) {
+        if (ul[i].clientHeight==minH) {
+          x=i;
+          break;
+        }
+      }
+      ul[x].appendChild(newli);
+   }
+   for (var i = 0; i < 20; i++) {
+     insert();
+   }
+   document.onscroll=function(){
+     var viewH=document.body.clientHeight||document.documentElement.clientHeight;
+     var winH=document.documentElement.scrollHeight;
+     var scrollT=document.body.scrollTop||document.documentElement.scrollTop;
+     if (winH-scrollT-viewH<500) {
+       for (var i = 0; i < 20; i++) {
+       insert();
+     }
+    }
+   }
+  </script>
+</body>
+</html>
