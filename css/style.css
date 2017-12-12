@@ -1,0 +1,385 @@
+body{
+	overflow-x: hidden;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000; 
+}
+.problem_chlid_play_life_head{
+	width: 100%;
+	height: 700px;
+	background: url(../images/problem_child_head_bg.jpg) no-repeat;
+	background-size: 100% 700px;
+	display: block;
+}
+/* ***************** 动漫简介 ************************* */
+.problem_child_play_life_bg_present{
+	position: relative;
+	width: 90%;
+	height: 300px;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid #fff;
+	border-bottom: 0 solid;
+	top: 400px;
+	left: 67px;
+	z-index: 2;
+	overflow: hidden;
+}
+.problem_child_bg_present_plan,.play_life_bg_present_plan{
+	width: 485px;
+	height: 240px;
+	background: #fff;
+	margin-top: 35px;
+	cursor: pointer;
+}
+.problem_child_bg_present_plan{
+	float: left;
+	margin-left: 30px;
+	background: url(../images/problem_child_bg_present.jpg) no-repeat;
+}
+.play_life_bg_present_plan{
+	float: right;
+	margin-right: 30px;
+	background: url(../images/play_life_bg_present.jpg) no-repeat;
+}
+.problem_child_bg_present_much,.play_life_bg_present_much{
+	position: absolute;
+	width: 600px;
+	height: 240px;
+	top: 35px;
+	display: none;
+	font-size: 10px;
+	cursor: pointer;
+}
+.problem_child_bg_present_much{
+	right: 30px;
+}
+.play_life_bg_present_much{
+	left: 30px;
+}
+.problem_child_mask,.play_life_mask{
+	position: absolute;
+	top: 35px;
+	width: 485px;
+	height: 240px;
+	color: #fff;
+	line-height: 240px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	z-index: 5;
+	display: none;
+}
+.problem_child_mask{
+	left: 30px;
+}
+.play_life_mask{
+	right: 30px;
+}
+.problem_child_bg_present_plan:hover .problem_child_mask,.play_life_bg_present_plan:hover .play_life_mask{
+	display: block;
+	-webkit-animation: upward 1s;
+	animation: upward 1s;
+}
+@-webkit-keyframes upward{
+	0% {
+		top: 520px;
+	}
+	100%{
+		top: 35px;
+	}
+}
+.problem_child_center{
+	width: 100%;
+	height: 500px;
+	background: url(../images/problem_child_bg_present_16ye.jpg);
+}
+.play_life_center{
+	width: 100%;
+	height: 500px;
+	display: none;
+	background: url(../images/play_life_bg_present_kongbai.jpg);
+}
+.problem_child_play_life_center_bg{
+	width: 90%;
+	height: 500px;
+	border: 1px solid #fff;
+	border-top: 0px solid;
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+}
+/* ***************** hr ************************* */
+.problem_child_play_life_cut-off_true{
+	width: 200px;
+	text-align: center;
+	font-family: "楷体";
+	font-size: 30px;
+	float: left;
+	margin-left: 500px;
+	margin-top: 20px;
+}
+.problem_child_play_life_cut-off_true::before,.problem_child_play_life_cut-off_true::after{
+	content:"";
+	border: 1px solid #000;
+	width: 400px;
+	display: block;
+	float: left;		
+}
+.problem_child_play_life_cut-off_true::before{
+	margin-top: 15px;
+	margin-left: -450px;
+}
+.problem_child_play_life_cut-off_true::after{
+	margin-top: -15px;
+	margin-left: 250px;
+}
+/* ***************** 角色介绍 ************************* */
+.problem_child_lunbo,.play_life_lunbo{
+	width: 100%;
+	height: 450px;
+	float: left;
+	margin-left: 75px;
+	position: relative;
+}
+.problem_child_present,.play_life_present{
+	width: 100%;
+	height: 360px;
+	float: left;
+	margin-top: 75px;
+	display: none;
+	font-size: 15px;
+}
+.problem_child_play_life_present_img{
+	width: 268px;
+	height: 340px;
+	float: left;
+	margin-left: 70px;
+}
+.problem_child_play_life_present_text{
+	width: 650px;
+	height: 360px;
+	float: left;
+	margin-left: 70px;
+}
+.wid{
+	width: 500px !important;
+}
+.item{
+	display: block;
+}
+.problem_child_lunbo_left,.problem_child_lunbo_right,.play_life_lunbo_left,.play_life_lunbo_right{
+	position: absolute;
+	top: 250px;
+	width: 32px;
+	height: 32px;
+	z-index: 500;
+	border: 1px solid #000;
+}
+.problem_child_lunbo_left,.play_life_lunbo_left{
+	left: 0px;
+	background: url(../images/left.png) no-repeat;
+}
+.problem_child_lunbo_right,.play_life_lunbo_right{
+	left: 1000px;
+	background: url(../images/right.png) no-repeat;
+}
+/* ***************** 图集 ************************* */
+.problem_child_atlas_bg{
+	width: 100%;
+	height: 650px;
+	background: #6495ED;
+}
+.play_life_atlas_bg{
+	width: 100%;
+	height: 650px;
+	background: #fff;
+	display: none;
+}
+.problem_child_play_life_atlas_outside{
+	width: 90%;
+	height: 650px;
+	border: 1px solid #fff;
+	border-top: 0px solid;
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+}
+.problem_child_play_life_atlas{
+	width: 100%;
+	height: 200px;
+	float: left;
+	margin-top: 50px;
+}
+.problem_child_play_life_atlas ul{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.problem_child_play_life_atlas li{
+
+	width: 151px;
+	height: 201px;
+	float: left;
+	padding: 0 65px;
+}
+.problem_child_play_life_atlas img{
+	width: 150px;
+	height: 200px;
+}
+.mask{
+	width: 150px;
+	height: 200px;
+	margin-left: -215px;
+	color: #fff;
+	line-height: 200px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	z-index: 5000;
+	float: left;
+}
+/* ***************** 视频 ************************* */
+.problem_child_bg_video{
+	width: 100%;
+	height: 700px;
+	background: #6495ED;
+}
+.play_life_bg_video{
+	width: 100%;
+	height: 700px;
+	background: #6495ED;
+	display: none;
+}
+.problem_child_play_file_video{
+	width: 90%;
+	height: 100%;
+	border: 1px solid #fff;
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+}
+.problem_child_play_file_video_pic ul li{
+	float: left;
+	padding: 10px 20px;
+	position: relative;
+}
+.problem_child_play_file_video_pic ul li a span{
+	position: absolute;
+	left: 60px;
+	top: 90px;
+	color: #fff;
+	background: #000;
+}
+.problem_child_play_file_video_pic img{
+	width: 150px;
+	height: 200px;
+}
+.problem_child_play_file_video_pic{
+	float: left;
+	margin-left: 80px;
+	margin-top: 50px;
+}
+.problem_child_play_file_video_text{
+	float: left;
+	margin-left: 80px;
+	margin-top: 50px;
+	display: none;
+}
+.problem_child_play_file_video_text li{
+	float: left;
+	padding: 0 20px;
+}
+/* ***************** 小说阅读 ************************* */
+.problem_child_play_file_bg_novel{
+	width: 100%;
+	height: 2400px;
+	background: #6495ED;
+	position: relative;
+}
+.problem_child_play_file_novel{
+	width: 90%;
+	height: 2400px;
+	border: 1px solid #fff;
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+}
+.problem_child_play_file_bg_novel_text{
+	width: 800px;
+	height: 180px;
+	margin: auto;
+	float: left;
+	margin-top: 50px;
+	margin-left: 250px;
+}
+.problem_child_play_file_bg_novel_text ul li{
+	float: left;
+	padding: 20px 20px;
+
+}
+.problem_child_novel_xianshi{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+.problem_child_novel_shang,.problem_child_novel_xia{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 0px;
+	left: 700px;
+	z-index: 50000;
+}
+.problem_child_novel_xia{
+	display: none;
+}
+/* ***************** 返回顶部 ************************* */
+#problem_child_play_life_fanhui{
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	z-index: 57000;
+	display: none;
+}
+/* ***************** 版权说明 ************************* */
+.problem_child_play_life_bg_floor{
+	position: relative;
+	width: 1349px;
+	height: 450px;
+	background: #6495ED;
+}
+.problem_child_play_life_floor{
+	position: absolute;
+	top: 40px;
+	left: 69px;
+	width: 1214px;
+	height: 400px;
+}
+.problem_child_play_life_floor ul{
+	width: 100%;
+	float: left;
+	height: 20px;
+}
+
+.problem_child_play_life_floor ul li{
+	float: left;
+	height: 20px;
+	padding: 0 10px;
+}
+.problem_child_play_life_floor li a{
+	color: #fff;
+}
+hr{
+	width: 100%;
+	height: 0px;
+	border: 1px solid #fff;
+}
+.problem_child_play_life_muhou{
+	width: 300px;
+}
+.problem_child_play_life_muhou::after{
+	margin-left: 350px;
+}
+/* ***************** 响应式 ************************* */
+@media screen  {
+	
+}
